@@ -5,7 +5,7 @@ const data = require('../data.json');
 const url = require('url');
 const path = require('path');
 
-const ROOT_FOLDER = path.join(__dirname, '..');
+const ROOT_FOLDER = path.join(__dirname);
 
 const app = jsonServer.create()
 const router = jsonServer.router(clone(data))

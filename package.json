@@ -1,5 +1,5 @@
 {
-  "name": "StudioGhibliAPI",
+  "name": "studio-ghibli-api",
   "version": "1.0.0",
   "description": "A simple API for Studio Ghibli resources",
   "keywords": [
@@ -13,7 +13,7 @@
     "testing",
     "prototyping"
   ],
-  "homepage": "https://ghibliapi.herokuapp.com",
+  "homepage": "https://ghibliapi.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/janaipakos/ghibliapi.git"

@@ -109,7 +109,7 @@ info:
     url: "./images/logo.svg"
     backgroundColor: "#FFFFFF"
 # the domain of the service
-host: ghibliapi.herokuapp.com
+host: ghibliapi.vercel.app
 # array of all schemes that your API supports
 schemes:
   - https

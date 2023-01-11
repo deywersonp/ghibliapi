@@ -1,7 +1,11 @@
-const jsonServer = require('json-server')
-const clone = require('clone')
-const data = require('../data.json')
+const jsonServer = require('json-server');
+const express = require('express');
+const clone = require('clone');
+const data = require('../data.json');
 const url = require('url');
+const path = require('path');
+
+const ROOT_FOLDER = path.join(__dirname, '..');
 
 const app = jsonServer.create()
 const router = jsonServer.router(clone(data))
@@ -15,6 +19,8 @@ app.use((req, res, next) => {
 app.use(jsonServer.defaults({
   logger: process.env.NODE_ENV !== 'production'
 }))
+
+app.use('/public', express.static(path.join(ROOT_FOLDER, 'public')));
 
 app.use(router)
 

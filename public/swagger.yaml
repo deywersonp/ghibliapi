@@ -5,12 +5,12 @@ info:
     # Studio Ghibli API
       The Studio Ghibli API catalogs the people, places, and things found in the worlds of Ghibli. It was created to help users discover resources, consume them via HTTP requests, and interact with them in whatever way makes sense. Navigation can be found on the left sidebar, and the right sidebar shows examples of returned objects for successful calls.
 
-      Users can raise an issue, ask for help, or find a contribution guide at the main repo: [https://github.com/janaipakos/ghibliapi](https://github.com/janaipakos/ghibliapi)
+      Users can raise an issue, ask for help, or find a contribution guide at the main repo: [https://github.com/deywersonp/ghibliapi](https://github.com/deywersonp/ghibliapi)
 
     # Getting Started
       Requests can be made with `curl` or other helper libraries by following regular REST calls. For example, here is how to GET the resource for the film *My Neighbor Tororo*:
 
-      `curl https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49`
+      `curl https://ghibliapi.vercel.app/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49`
 
       Calling this resource will respond with the following object:
 
@@ -33,7 +33,7 @@ info:
     # Base URL
       Users must prepend all resource calls with this base URL:
 
-      `https://ghibliapi.herokuapp.com`
+      `https://ghibliapi.vercel.app`
 
     # Authentication
        There is no authentication necessary for the Studio Ghibli API.
@@ -148,18 +148,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/films
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/films
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/films')
+            uri = URI('https://ghibliapi.vercel.app/films')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/films').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/films').read()
 
       responses:
         200:
@@ -182,18 +182,18 @@ paths:
               "running_time": "124",
               "rt_score": "95",
               "people": [
-                "https://ghibliapi.herokuapp.com/people/"
+                "https://ghibliapi.vercel.app/people/"
               ],
               "species": [
-                "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+                "https://ghibliapi.vercel.app/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
               ],
               "locations": [
-                "https://ghibliapi.herokuapp.com/locations/"
+                "https://ghibliapi.vercel.app/locations/"
               ],
               "vehicles": [
-                "https://ghibliapi.herokuapp.com/vehicles/"
+                "https://ghibliapi.vercel.app/vehicles/"
               ],
-              "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+              "url": "https://ghibliapi.vercel.app/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
               },
               {
               "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
@@ -207,18 +207,18 @@ paths:
               "running_time": "89",
               "rt_score": "97",
               "people": [
-                "https://ghibliapi.herokuapp.com/people/"
+                "https://ghibliapi.vercel.app/people/"
               ],
               "species": [
-                "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+                "https://ghibliapi.vercel.app/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
               ],
               "locations": [
-                "https://ghibliapi.herokuapp.com/locations/"
+                "https://ghibliapi.vercel.app/locations/"
               ],
               "vehicles": [
-                "https://ghibliapi.herokuapp.com/vehicles/"
+                "https://ghibliapi.vercel.app/vehicles/"
               ],
-              "url": "https://ghibliapi.herokuapp.com/films/12cfb892-aac0-4c5b-94af-521852e46d6a"
+              "url": "https://ghibliapi.vercel.app/films/12cfb892-aac0-4c5b-94af-521852e46d6a"
               }]
         '400':
           description: Bad request
@@ -245,18 +245,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/films/<id>
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/films/<id>
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/films/<id>')
+            uri = URI('https://ghibliapi.vercel.app/films/<id>')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/films/<id>').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/films/<id>').read()
       responses:
         200:
           description: A single film is returned
@@ -277,18 +277,18 @@ paths:
               running_time: "124"
               rt_score: "95"
               people: [
-                "https://ghibliapi.herokuapp.com/people/"
+                "https://ghibliapi.vercel.app/people/"
               ]
               species: [
-                "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+                "https://ghibliapi.vercel.app/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
               ]
               locations: [
-                "https://ghibliapi.herokuapp.com/locations/"
+                "https://ghibliapi.vercel.app/locations/"
               ]
               vehicles: [
-                "https://ghibliapi.herokuapp.com/vehicles/"
+                "https://ghibliapi.vercel.app/vehicles/"
               ]
-              url: "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+              url: "https://ghibliapi.vercel.app/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
         '400':
           description: Bad request
         '404':
@@ -317,18 +317,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/people
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/people
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/people')
+            uri = URI('https://ghibliapi.vercel.app/people')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/people').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/people').read()
       responses:
         200:
           description: An array of people
@@ -346,10 +346,10 @@ paths:
               "eye_color": "brown",
               "hair_color": "brown",
               "films": [
-                "https://ghibliapi.herokuapp.com/films/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
+                "https://ghibliapi.vercel.app/films/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
               ],
-              "species":    "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
-              "url": "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0"
+              "species":    "https://ghibliapi.vercel.app/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+              "url": "https://ghibliapi.vercel.app/people/ba924631-068e-4436-b6de-f3283fa848f0"
             },
             {
               "id": "030555b3-4c92-4fce-93fb-e70c3ae3df8b",
@@ -359,10 +359,10 @@ paths:
               "eye_color": "Grey",
               "hair_color": "Brown",
               "films": [
-                "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
               ],
-              "species": "https://ghibliapi.herokuapp.com/species/6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
-              "url": "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
+              "species": "https://ghibliapi.vercel.app/species/6bc92fdd-b0f4-4286-ad71-1f99fb4a0d1e",
+              "url": "https://ghibliapi.vercel.app/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
             }]
         '400':
           description: Bad request
@@ -389,18 +389,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/people/<id>
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/people/<id>
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/people/<id>')
+            uri = URI('https://ghibliapi.vercel.app/people/<id>')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/people/<id>').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/people/<id>').read()
       responses:
         200:
           description: A single person is returned
@@ -416,10 +416,10 @@ paths:
               eye_color: Emerald
               hair_color: Grey
               films: [
-                https://ghibliapi.herokuapp.com/films/90b72513-afd4-4570-84de-a56c312fdf81
+                https://ghibliapi.vercel.app/films/90b72513-afd4-4570-84de-a56c312fdf81
               ]
-              species: https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
-              url: https://ghibliapi.herokuapp.com/people/3042818d-a8bb-4cba-8180-c19249822d57
+              species: https://ghibliapi.vercel.app/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
+              url: https://ghibliapi.vercel.app/people/3042818d-a8bb-4cba-8180-c19249822d57
         '400':
           description: Bad request
         '404':
@@ -448,18 +448,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/locations
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/locations
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/locations')
+            uri = URI('https://ghibliapi.vercel.app/locations')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/locations').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/locations').read()
       responses:
         200:
           description: An array of locations
@@ -476,13 +476,13 @@ paths:
                 "terrain": "Mountain",
                 "surface_water": "40",
                 "residents": [
-                  "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
-                  "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
+                  "https://ghibliapi.vercel.app/people/ba924631-068e-4436-b6de-f3283fa848f0",
+                  "https://ghibliapi.vercel.app/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
                 ],
                 "films": [
-                  "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                  "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
-                "url": "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
+                "url": "https://ghibliapi.vercel.app/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
               },
               {
                 "id": "11014596-71b0-4b3e-b8c0-1c4b15f28b9a",
@@ -491,13 +491,13 @@ paths:
                 "terrain": "Hill",
                 "surface_water": "50",
                 "residents": [
-                  "https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0",
-                  "https://ghibliapi.herokuapp.com/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
+                  "https://ghibliapi.vercel.app/people/ba924631-068e-4436-b6de-f3283fa848f0",
+                  "https://ghibliapi.vercel.app/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
                 ],
                 "films": [
-                  "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                  "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                 ],
-                "url": "https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
+                "url": "https://ghibliapi.vercel.app/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
               }]
         '400':
           description: Bad request
@@ -523,18 +523,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/locations/<id>
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/locations/<id>
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/locations/<id>')
+            uri = URI('https://ghibliapi.vercel.app/locations/<id>')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/locations/<id>').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/locations/<id>').read()
       responses:
         200:
           description: A single location is returned
@@ -550,12 +550,12 @@ paths:
               terrain: Mountain
               surface_water: "40"
               residents: [
-                https://ghibliapi.herokuapp.com/people/ba924631-068e-4436-b6de-f3283fa848f0
+                https://ghibliapi.vercel.app/people/ba924631-068e-4436-b6de-f3283fa848f0
               ]
               films: [ 
-                https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
+                https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6
               ]
-              url: https://ghibliapi.herokuapp.com/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
+              url: https://ghibliapi.vercel.app/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a
         '400':
           description: Bad request
         '404':
@@ -584,18 +584,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/species
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/species
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/species')
+            uri = URI('https://ghibliapi.vercel.app/species')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/species').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/species').read()
       responses:
         200:
           description: An array of species
@@ -612,12 +612,12 @@ paths:
                   "classification": "Spirit",
                   "eye_colors": "Red",
                   "hair_colors": "Light Orange",
-                  "url": "https://ghibliapi.herokuapp.com/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
+                  "url": "https://ghibliapi.vercel.app/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
                   "people": [
-                    "https://ghibliapi.herokuapp.com/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
+                    "https://ghibliapi.vercel.app/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
                   ],
                   "films": [
-                    "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                    "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                   ]
                 },
                 {
@@ -626,12 +626,12 @@ paths:
                   "classification": "God",
                   "eye_colors": "Brown",
                   "hair_colors": "White",
-                  "url": "https://ghibliapi.herokuapp.com/species/f25fa661-3073-414d-968a-ab062e3065f7",
+                  "url": "https://ghibliapi.vercel.app/species/f25fa661-3073-414d-968a-ab062e3065f7",
                   "people": [
                     "Moro"
                   ],
                   "films": [
-                    "https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+                    "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
                   ]
                 }
                 ]
@@ -659,18 +659,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/species/<id>
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/species/<id>
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/species/<id>')
+            uri = URI('https://ghibliapi.vercel.app/species/<id>')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/species/<id>').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/species/<id>').read()
       responses:
         200:
           description: A single species is returned
@@ -686,24 +686,24 @@ paths:
               eye_colors: "Brown, Black, Yellow, White, Emerald, Blue, Green"
               hair_colors: "White, Black, Brown, Beige, Grey, Yellow"
               people: [
-                "https://ghibliapi.herokuapp.com/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
-                "https://ghibliapi.herokuapp.com/people/f467e18e-3694-409f-bdb3-be891ade1106",
-                "https://ghibliapi.herokuapp.com/people/89026b3a-abc4-4053-ab1a-c6d2eea68faa",
-                "https://ghibliapi.herokuapp.com/people/6b3facea-ea33-47b1-96ce-3fc737b119b8",
-                "https://ghibliapi.herokuapp.com/people/3042818d-a8bb-4cba-8180-c19249822d57",
-                "https://ghibliapi.herokuapp.com/people/58d1973f-f247-47d7-9358-e56cb0d2b5a6",
-                "https://ghibliapi.herokuapp.com/people/a3d8e70f-46a0-4e5a-b850-db01620d6b92",
-                "https://ghibliapi.herokuapp.com/people/fc196c4f-0201-4ed2-9add-c6403f7c4d32",
-                "https://ghibliapi.herokuapp.com/people/466bc926-2024-4653-ac63-fe52f2dc8c7b"
+                "https://ghibliapi.vercel.app/people/7151abc6-1a9e-4e6a-9711-ddb50ea572ec",
+                "https://ghibliapi.vercel.app/people/f467e18e-3694-409f-bdb3-be891ade1106",
+                "https://ghibliapi.vercel.app/people/89026b3a-abc4-4053-ab1a-c6d2eea68faa",
+                "https://ghibliapi.vercel.app/people/6b3facea-ea33-47b1-96ce-3fc737b119b8",
+                "https://ghibliapi.vercel.app/people/3042818d-a8bb-4cba-8180-c19249822d57",
+                "https://ghibliapi.vercel.app/people/58d1973f-f247-47d7-9358-e56cb0d2b5a6",
+                "https://ghibliapi.vercel.app/people/a3d8e70f-46a0-4e5a-b850-db01620d6b92",
+                "https://ghibliapi.vercel.app/people/fc196c4f-0201-4ed2-9add-c6403f7c4d32",
+                "https://ghibliapi.vercel.app/people/466bc926-2024-4653-ac63-fe52f2dc8c7b"
                 ]
               films: [
-                "https://ghibliapi.herokuapp.com/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49",
-                "https://ghibliapi.herokuapp.com/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
-                "https://ghibliapi.herokuapp.com/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
-                "https://ghibliapi.herokuapp.com/films/90b72513-afd4-4570-84de-a56c312fdf81",
-                "https://ghibliapi.herokuapp.com/films/2de9426b-914a-4a06-a3a0-5e6d9d3886f6"
+                "https://ghibliapi.vercel.app/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49",
+                "https://ghibliapi.vercel.app/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
+                "https://ghibliapi.vercel.app/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3",
+                "https://ghibliapi.vercel.app/films/90b72513-afd4-4570-84de-a56c312fdf81",
+                "https://ghibliapi.vercel.app/films/2de9426b-914a-4a06-a3a0-5e6d9d3886f6"
                 ]
-              url: https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
+              url: https://ghibliapi.vercel.app/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3
         '400':
           description: Bad request
         '404':
@@ -733,18 +733,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/vehicles
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/vehicles
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/vehicles')
+            uri = URI('https://ghibliapi.vercel.app/vehicles')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/vehicles').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/vehicles').read()
       responses:
         200:
           description: An array of vehicles
@@ -760,11 +760,11 @@ paths:
                   "description": "A military airship utilized by the government to access Laputa",
                   "vehicle_class": "Airship",
                   "length": "1,000",
-                  "pilot": "https://ghibliapi.herokuapp.com/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
+                  "pilot": "https://ghibliapi.vercel.app/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
                   "films": [
-                    "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+                    "https://ghibliapi.vercel.app/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
                   ],
-                  "url": "https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+                  "url": "https://ghibliapi.vercel.app/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
                 },
                 {
                   "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
@@ -772,11 +772,11 @@ paths:
                   "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
                   "vehicle_class": "Airplane",
                   "length": "20",
-                  "pilot": "https://ghibliapi.herokuapp.com/people/6523068d-f5a9-4150-bf5b-76abe6fb42c3",
+                  "pilot": "https://ghibliapi.vercel.app/people/6523068d-f5a9-4150-bf5b-76abe6fb42c3",
                   "films": [
-                    "https://ghibliapi.herokuapp.com/films/ebbb6b7c-945c-41ee-a792-de0e43191bd8"
+                    "https://ghibliapi.vercel.app/films/ebbb6b7c-945c-41ee-a792-de0e43191bd8"
                   ],
-                  "url": "https://ghibliapi.herokuapp.com/vehicles/d8f893b5-1dd9-41a1-9918-0099c1aa2de8"
+                  "url": "https://ghibliapi.vercel.app/vehicles/d8f893b5-1dd9-41a1-9918-0099c1aa2de8"
                 }
                 ]
         '400':
@@ -804,18 +804,18 @@ paths:
       x-code-samples:
         - lang: curl
           source: |
-            curl -X GET -H "Content-Type: application/json" https://ghibliapi.herokuapp.com/vehicles/<id>
+            curl -X GET -H "Content-Type: application/json" https://ghibliapi.vercel.app/vehicles/<id>
         - lang: Ruby
           source: |
             require 'net/http'
 
-            uri = URI('https://ghibliapi.herokuapp.com/vehicles/<id>')
+            uri = URI('https://ghibliapi.vercel.app/vehicles/<id>')
             Net::HTTP.get(uri) # => String
         - lang: Python
           source: |
             import urllib2
 
-            urllib2.urlopen('https://ghibliapi.herokuapp.com/vehicles/<id>').read()
+            urllib2.urlopen('https://ghibliapi.vercel.app/vehicles/<id>').read()
       responses:
         200:
           description: A single vehicle is returned
@@ -831,11 +831,11 @@ paths:
                   "description": "A toy boat where Sosuke plays",
                   "vehicle_class": "Boat",
                   "length": "10",
-                  "pilot": "https://ghibliapi.herokuapp.com/people/a10f64f3-e0b6-4a94-bf30-87ad8bc51607",
+                  "pilot": "https://ghibliapi.vercel.app/people/a10f64f3-e0b6-4a94-bf30-87ad8bc51607",
                   "films": [
-                    "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786"
+                    "https://ghibliapi.vercel.app/films/758bf02e-3122-46e0-884e-67cf83df1786"
                   ],
-                  "url": "https://ghibliapi.herokuapp.com/films/758bf02e-3122-46e0-884e-67cf83df1786"
+                  "url": "https://ghibliapi.vercel.app/films/758bf02e-3122-46e0-884e-67cf83df1786"
                 }
         '400':
           description: Bad request
